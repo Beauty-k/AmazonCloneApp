@@ -7,7 +7,9 @@ Rails.application.routes.draw do
   resources :products, only: [:index, :show]
  
   resources :cart_items, only: [:index, :show, :create, :destroy]
+  # resources :shipping_addresses
   resources :shipping_addresses
+
   # delete '/shipping_address',to: 'shipping_addresses#destroy'
 
 

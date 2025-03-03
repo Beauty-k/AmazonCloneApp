@@ -1,6 +1,6 @@
 class ShippingAddressesController < ApplicationController
     before_action :authenticate_user
-    before_action :set_shipping_adress, only: %i[edit,update,destroy]
+    before_action :set_shipping_address, only: %i[edit update destroy]
 
     def index
         @shipping_addresses = current_user.shipping_addresses
@@ -15,21 +15,17 @@ class ShippingAddressesController < ApplicationController
         if @shipping_address.save
             redirect_to shipping_addresses_path, notice: "Shipping address added successfully!"
         else
+            puts @shipping_address.errors.full_messages 
             flash[:alert] = "Shipping address could not be added!"
-            render :new
+            render :new, status: :unprocessable_entity
         end
     end 
 
     def edit
-        @shipping_address = current_user.shipping_addresses.find(params[:id])
+    
     end
 
     def update
-        @shipping_address = current_user.shipping_addresses.find(params[:id])
-        if @shipping_address.nil?
-             flash[:alert] = "Shipping address not found."
-            redirect_to shipping_addresses_path and return
-        end
 
         if @shipping_address.update(shipping_address_params)
             redirect_to shipping_addresses_path, notice: "shipping address updated successfully"
@@ -52,6 +48,8 @@ class ShippingAddressesController < ApplicationController
     
     def set_shipping_address
         @shipping_address = current_user.shipping_addresses.find(params[:id])
+        rescue ActiveRecord::RecordNotFound
+        redirect_to shipping_addresses_path, alert: "Shipping address not found."
     end
 
     def shipping_address_params

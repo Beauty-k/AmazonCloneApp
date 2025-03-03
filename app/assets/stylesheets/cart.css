@@ -30,8 +30,6 @@ body{
 }
 
 .cart-item{
-    /* margin-top: 20px; */
-    /* margin-left: 10px; */
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -41,8 +39,6 @@ body{
     margin-left: 7px;
 }
 .outer-cart{
-    /* display: flex;
-    justify-content: space-between; */
     margin: 35px;
 }
 #c-heading{
@@ -57,26 +53,19 @@ body{
     padding-left: 35px;
 }
 .chechout{
-    /* margin-bottom: 400px; */
+  
     margin-top: 50px;
     height: 180px;
     width: 300px;
-    /* background-color: brown; */
+    
     background-color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
     color: black;
-    /* margin-left: 1000px; */
+   
 }
-/* .outer{
-    height: 300px;
-    width: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 400px;
-} */
+
 .checkout-link{
     height: 30px;
     width: 258px;
@@ -116,13 +105,13 @@ body{
 }
 #f-element{
     margin-bottom: 20px;
-}
+}          
 .addr{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* margin-top: 100px; */
+   
 }
 hr{
     opacity: 0.5;
@@ -148,10 +137,7 @@ hr{
     margin: 20px;
     margin-left: 35px;
 }
-/* #f-element{
-    height: 31px;
-    width: 508px;
-} */
+
 .buy{
     height: 160px;
     width: 360px;
@@ -159,9 +145,7 @@ hr{
     display: flex;
     align-items: center;
     justify-content: center;
-    /* margin-top: 50px; */
-    /* margin-left: 1000px; */
-    /* margin-bottom: 130px; */
+   
 }
 .order-link{
     height: 30px;
@@ -175,7 +159,7 @@ hr{
     align-items: center;
     justify-content: center;
 }
-.addr{
+.addr2{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -193,7 +177,7 @@ hr{
     display: flex;
     justify-content: space-between;
 }
-#addr-heading{
+#addr2-heading{
     margin-top: 10px;
     height: 60px;
     background-color: #ffffff;
