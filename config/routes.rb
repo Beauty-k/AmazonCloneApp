@@ -27,6 +27,6 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
   get "/render_profile", to: "users#render_profile"
   get "/office_product", to: "amazon_clone#render_products"
-  root "amazon_clone#index"
+  root "home#index"
 
 end
