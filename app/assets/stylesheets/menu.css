@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* background-color: whitesmoke; */
+}
+.side-menu{
+    width: 365px;
+    border: 0.5px black ;
+    color: #0F1111;
+    background-color: white;
+}
+.m-h{
+    height: 50px;
+    width: 365px;
+    background-color: #232F3E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    gap: 10px;
+    font-size: 19px;
+}
+.title1{
+    height: 42px;
+    width: 271px;
+    align-items: center;
+    align-content: center;
+}
+
