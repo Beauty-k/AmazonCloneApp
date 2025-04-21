@@ -4,8 +4,9 @@ class CartService
         @product = product
     end
    
-    def add_product
-            cart_item = @cart.cart_items.find_by(product: @product)
+    def add_or_increment_product
+        cart_item = @cart.cart_items.find_by(product: @product)
+        cart_item = find_cart_item
         if cart_item
             cart_item.quantity += 1
             return cart_item if cart_item.save
@@ -14,6 +15,10 @@ class CartService
             return new_cart_item if new_cart_item.persisted?
         end
         nil
+        
+    end
+
+    def update_cart_item
         
     end
 

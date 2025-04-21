@@ -32,15 +32,10 @@
     </div>
 
         <div class="s-L">
-            <%#= link_to login_path, class: "s-rend" do %>
                 <div class="s-in">
-                    <%#= render 'sessions/form' %>
-                    
-                    <%= link_to "Hello,Sign In", login_path, class: "s-rend" %>
-                    <%#= render 'devise/sessions/new' %>
+                    <%= link_to "Hello,Sign In", new_user_session_path, class: "s-rend" %>
                     <span id="A-l">Accounts & Lists</span>
                 </div>
-            <%# end %>
         </div>
 
         <div class="return">
@@ -56,7 +51,7 @@
     </div>
     <div class="panel">
         <div class="menu">
-            <%= link_to "#", class:"Menu-link" do %>
+            <%= link_to "home/menu", class:"Menu-link" do %>
                 <div class="render"></div>
                 <i class="fa-solid fa-bars"></i>
                 <span id = "m-all">All</span>  

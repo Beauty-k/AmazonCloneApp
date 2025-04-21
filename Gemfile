@@ -70,6 +70,6 @@ gem 'pry-rails'
 # webpack
 gem "webpacker", "~> 5.4"
 
-gem "devise", "~> 4.9"
+gem 'devise'
 gem "view_component"
 
